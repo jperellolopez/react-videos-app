@@ -1,0 +1,13 @@
+1- Create npx app on current folder: npx create-react-app ./
+
+2 - Add required dependencies to package.json file (mainly to use Material UI)
+
+3 - Install dependencies using: npm install --legacy-peer-deps 
+
+4 - (to start from zero) Delete elements on src folder and create App.js and index.js files inside. App.js will be the start point of the application. index.js will fetch that starting point and display it in the browser.
+
+5- Register into Rapidapi and search for the Youtube V3 API on the hub section: (https://rapidapi.com/ytdlfree/api/youtube-v31). There: 5.1-Click on 'subscribe to test', then select basic. Go back to 'endpoints' section, and select 'suggested videos' on the left panel. 5.2- Copy the options object on the right. 5.3- Create a new file called 'fetchFromAPI.js' on the utils folder, import axios and paste the options object. Delete the 'method' and 'url' properties storing the value of 'url' into a variable named BASE_URL. Then delete all params except maxResults. On the headers, copy the key and store as an env variable (REACT_APP_RAPID_API_KEY) into a .env file. 
+
+6- Inside public folder create a file called '_redirects' and fill in '/* /index.html 200' to force Netlify to load the index file first. Type 'npm run build' to create a production build.  Login into Netlify, go to 'sites' section, and drop the 'build' folder.
+
+--Start on localhost: npm-start
